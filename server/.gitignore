@@ -1,0 +1,4 @@
+node_modules
+wildersdb.sqlite
+.env
+build
