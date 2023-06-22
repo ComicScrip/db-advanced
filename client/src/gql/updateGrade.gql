@@ -1,3 +1,0 @@
-mutation UpdateGrade($votes: Int!, $skillId: Int!, $wilderId: Int!) {
-  updateGrade(votes: $votes, skillId: $skillId, wilderId: $wilderId)
-}

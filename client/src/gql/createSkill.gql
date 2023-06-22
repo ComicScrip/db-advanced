@@ -1,6 +1,0 @@
-mutation CreateSkill($data: SkillInput!) {
-  createSkill(data: $data) {
-    id
-    name
-  }
-}

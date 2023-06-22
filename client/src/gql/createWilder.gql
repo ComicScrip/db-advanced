@@ -1,5 +1,0 @@
-mutation CreateWilder($data: WilderInput!) {
-  createWilder(data: $data) {
-    id
-  }
-}
