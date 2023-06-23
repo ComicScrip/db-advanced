@@ -10,6 +10,7 @@ import {
 import User from "./User";
 import Transfer from "./Transfer";
 import Withdraw from "./Withdraw";
+import { TypeormLoader } from "type-graphql-dataloader";
 
 @Entity()
 @ObjectType()
@@ -20,6 +21,7 @@ class Account {
   id: number;
 
   @ManyToOne(() => User, (user) => user.accounts)
+  @TypeormLoader()
   user: User;
 
   @Column()

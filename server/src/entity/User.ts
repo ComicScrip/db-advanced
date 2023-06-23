@@ -7,6 +7,7 @@ import {
   PrimaryGeneratedColumn,
 } from "typeorm";
 import Account from "./Account";
+import { TypeormLoader } from "type-graphql-dataloader";
 
 @Entity()
 @ObjectType()
@@ -17,10 +18,12 @@ class User {
 
   @Field()
   @Column()
+  @Index()
   email: string;
 
   @Field(() => [Account])
   @OneToMany(() => Account, (a) => a.user)
+  @TypeormLoader()
   accounts: Account[];
 }
 
