@@ -11,5 +11,5 @@ export default new DataSource({
   database: env.DB_NAME ?? "postgres",
   synchronize: true,
   entities,
-  logging: ["error"],
+  logging: ["error", "query"],
 });

@@ -19,6 +19,7 @@ class User {
   @Column()
   email: string;
 
+  @Field(() => [Account])
   @OneToMany(() => Account, (a) => a.user)
   accounts: Account[];
 }

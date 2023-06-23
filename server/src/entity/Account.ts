@@ -20,13 +20,14 @@ class Account {
   id: number;
 
   @ManyToOne(() => User, (user) => user.accounts)
-  @Field()
   user: User;
 
   @Column()
+  @Field()
   name: string;
 
   @Column({ type: "float" })
+  @Field()
   balance: number;
 
   @OneToMany(() => Transfer, (t) => t.from)
