@@ -10,6 +10,7 @@ export class UserResolver {
   ): Promise<User[]> {
     return await datasource.getRepository(User).find({ where: { email } });
   }
+
   /*
   @FieldResolver()
   async accounts(@Root() user: User): Promise<Account[]> {

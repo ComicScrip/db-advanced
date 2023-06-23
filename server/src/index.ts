@@ -5,12 +5,13 @@ import { ApolloServerPluginLandingPageLocalDefault } from "apollo-server-core";
 import { buildSchema } from "type-graphql";
 import { ApolloServerLoaderPlugin } from "type-graphql-dataloader";
 import { UserResolver } from "./resolver/UserResolver";
+import { TransferResolver } from "./resolver/TransferResolver";
 
 async function start(): Promise<void> {
   await db.initialize();
 
   const schema = await buildSchema({
-    resolvers: [UserResolver],
+    resolvers: [UserResolver, TransferResolver],
   });
 
   const server = new ApolloServer({
